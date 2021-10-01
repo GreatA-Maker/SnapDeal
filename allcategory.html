@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    ul li{
+        list-style-type: none;
+    }
+    .main-list {
+        width: 200px;
+        height: 300px;
+        padding: 10px;
+        margin-left: 20px;
+        border: 1px solid black;
+    }
+    .main-list li a{
+        text-decoration: none;
+        display: block;
+        padding: 5px 0px;
+        color: red;
+    }
+    .main-list li:hover a{
+        color: white;
+        background-color: black;
+
+    }
+
+    /* inside main list - inner list*/
+    .inside-mainlist {
+        position: absolute;
+        width: 800px;
+        height: 300px;
+        padding: 10px 0px;
+        border: 1px solid blue;
+        margin-left: 210px;
+        margin-top: -38px;
+        display: none;
+    }
+    .main-list li:hover .inside-mainlist li a{
+        background: white;
+        color: black;
+    }
+    .main-list li .inside-mainlist li:hover a{
+        color: white;
+        background-color: black;
+    }
+
+    /* main list hover - inner list gets visible*/
+    .main-list li:hover .inside-mainlist{
+        display: block;
+    }
+    </style>
+</head>
+<body>
+    <ul class="main-list">
+        <p>TOP CATEGORIES</p>
+        <li><a href="">All Offers</a>
+            <ul class="inside-mainlist">
+                <li><a href="#">Air Purifiers</a></li>
+                <li><a href="#">Geysers</a></li>
+                <li><a href="#">Socks</a></li>
+                <li><a href="#">Hair Dryers</a></li>
+                <li><a href="#">Air conditioners</a></li>
+            </ul>
+        </li>
+        <li><a href="">Mobile & Tablets</a>
+            <ul class="inside-mainlist">
+                <li><a href="#">Smart Phones</a></li>
+                <li><a href="#">Featured Phones</a></li>
+                <li><a href="#">Tablets</a></li>
+                <li><a href="#">Flip covers</a></li>
+                <li><a href="#">Power Bank</a></li>
+            </ul>
+        </li>
+        <li><a href="">Electronics</a></li>
+        <li><a href="">Computer & Gaming</a></li>
+        <li><a href="">Home & Kitchen</a></li>
+        <p>More CATEGORIES</p>
+        <li><a href="">Men's Fashion</a></li>
+        <li><a href="">Women's Fashion</a></li>
+    </ul>
+</body>
+</html>
